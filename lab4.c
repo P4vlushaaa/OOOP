@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-int main (void) {
-    int num, max_num, min_num;
-    scanf("%d", &num);
-    printf("%d\n", ((num >= 1) && (num <= 1000)));
-    max_num = 1000 / num;
-    min_num = num / 1;
-    printf("%d", max_num & min_num);
-
-    int num2;
-    scanf("%d", &num2);
-    int bit = 1 & (num2 << 3);
+int main() {
+    int a;
+    scanf("%d", &a);
+    bool x1, x2;
+    x1 = (-77 - a) & (1 << 31); // a > -77
+    x2 = (1 - a) & (1 << 31); // a < 1
+    printf("%d\n", (x1 && !x2)); // -77 < a < 1
+    int b;
+    scanf("%d", &b);
+    int bit = 1 & (b << 18);
     printf("%d", bit);
+    return 0;
 }
