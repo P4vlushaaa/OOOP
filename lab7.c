@@ -30,6 +30,13 @@ double P(int a){
     return a * 4;
 }
 
+void Per (coord& A, coord& B){
+
+    int per;
+    per = sqrtf(powf(B.x - A.x, 2) + powf(B.y - A.y, 2)) * 4;
+    printf("perimeter of the square is: %d\n", per);
+}
+
 int main(){
 
     //Задание №1
@@ -48,9 +55,7 @@ int main(){
 
     struct coord A = { 1, 1}; // две соседние вершины.
     struct coord B = { 3, 1};
-    int per;
-    per = sqrtf(powf(B.x - A.x, 2) + powf(B.y - A.y, 2)) * 4;
-    printf("perimeter of the square is: %d\n", per);
+    Per(A, B);
 
     //Задание №3
 
